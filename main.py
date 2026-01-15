@@ -3,27 +3,19 @@ from agents.new_summary_agent.agent import run_news_summary
 
 def main():
     print("🚀 --- Starting Multi-Agent Research Pipeline ---")
-    
-    # Now it will wait for YOU to type something
-    user_topic = input("📝 Enter your research topic: ")
-    
-    if not user_topic.strip():
-        print("❌ No topic entered. Exiting...")
-        return
+    topic = input("📝 Enter your research topic: ")
 
-    # Step 1: Researcher Agent
-    raw_report = run_news_search(user_topic)
-    
+    # 1. Researcher (The Driver) gets the raw data
+    raw_report = run_news_search(topic)
     print("\n--- RESEARCHER OUTPUT ---")
     print(raw_report)
+
+    # 2. Summarizer (The Communications Officer) refines it
+    # We pass both the TOPIC and the RAW_REPORT here
+    summary_report = run_news_summary(topic, raw_report)
     
-    # Step 2: Critic Agent
-    critique = run_news_summary(raw_report)
-    
-    print("\n--- CRITIC'S REVIEW ---")
-    print(critique)
-    
-    print("\n✅ Pipeline Complete.")
+    print("\n--- EXECUTIVE SUMMARY ---")
+    print(summary_report)
 
 if __name__ == "__main__":
     main()

@@ -49,7 +49,7 @@ my-ai-agents/
 
 ---
 
-## 🏃 Usage
+## Usage
 
 ### Start the Full Pipeline
 Run the orchestrator from the root folder:
