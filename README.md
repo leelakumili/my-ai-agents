@@ -12,10 +12,10 @@ Before you begin, ensure you have the following API keys:
 
 ---
 
-## Local Setup
+## 🚀 Local Setup
 
 ### 1. Clone & Environment
-\`\`\`zsh
+```zsh
 # Create your virtual environment
 python3 -m venv venv
 
@@ -24,20 +24,20 @@ source venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
-\`\`\`
+```
 
 ### 2. Configure Keys
 Create a file named `.env` in the root directory:
-\`\`\`text
+```zsh
 GROQ_API_KEY=your_groq_key_here
 TAVILY_API_KEY=your_tavily_key_here
-\`\`\`
+```
 
 ---
 
 ## 📂 Project Structure
 
-\`\`\`text
+```zsh
 my-ai-agents/
 ├── core/                # API clients & shared logic
 ├── agents/              
@@ -45,7 +45,7 @@ my-ai-agents/
 │   └── new_summary_agent/    # Summarize the news
 ├── main.py              # Orchestrator (Entry Point)
 └── requirements.txt     # Dependency list
-\`\`\`
+```
 
 ---
 
@@ -53,10 +53,10 @@ my-ai-agents/
 
 ### Start the Full Pipeline
 Run the orchestrator from the root folder:
-\`\`\`zsh
+```zsh
 export PYTHONPATH=\$PYTHONPATH:.
 python main.py
-\`\`\`
+```
 
 ---
 
